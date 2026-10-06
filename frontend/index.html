@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask My Docs</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="grid"></i><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i><i class="spark s4"></i><i class="spark s5"></i></div>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+    <div class="brand">
+      <div class="brand-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+      </div>
+      <div><div class="brand-name">Ask My Docs</div><div class="brand-sub">AI Document Intelligence</div></div>
+    </div>
+    <nav class="nav">
+      <button class="nav-item active" data-view="chat">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chat
+      </button>
+      <button class="nav-item" data-view="documents">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Documents
+        <span class="badge" id="navCount" hidden>0</span>
+      </button>
+    </nav>
+    <div class="side-foot">
+      <div class="sys-card">
+        <div class="status" id="sideStatus"><span class="dot checking"></span><span class="status-text">Checking system…</span></div>
+        <ul class="sys-list"><li>Hybrid Retrieval</li><li>Cross-Encoder Reranking</li><li>Grounded Generation</li></ul>
+      </div>
+      <div class="powered">Powered by FastAPI · Hybrid RAG · Qwen</div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <div class="top-title"><h1>Ask My Docs</h1><p>AI Document Intelligence</p></div>
+      <div class="status top-status" id="topStatus"><span class="dot checking"></span><span class="status-text">Checking…</span></div>
+    </header>
+
+    <section class="view" id="view-chat">
+      <div class="chat-scroll" id="chatScroll">
+        <div class="empty" id="emptyState">
+          <div class="hero" aria-hidden="true">
+            <i class="ring"></i><i class="ring r2"></i><i class="halo"></i>
+            <div class="hero-doc"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></div>
+            <i class="fl f1"></i><i class="fl f2"></i><i class="fl f3"></i>
+          </div>
+          <div class="kicker">ASK MY DOCS</div>
+          <h2>Ask anything about your documents</h2>
+          <p>Search, understand, and get grounded answers from your documents.</p>
+          <div class="suggestions">
+            <button class="chip" data-q="What is Deep Learning?"><span class="spark-ic">✦</span><span class="chip-text">What is Deep Learning?</span><span class="arrow">→</span></button>
+            <button class="chip" data-q="Summarize the main concepts"><span class="spark-ic">✦</span><span class="chip-text">Summarize the main concepts</span><span class="arrow">→</span></button>
+            <button class="chip" data-q="What are the key points in this document?"><span class="spark-ic">✦</span><span class="chip-text">What are the key points in this document?</span><span class="arrow">→</span></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </div>
+      <div class="composer-wrap">
+        <form class="composer" id="askForm">
+          <label for="questionInput" class="sr-only">Your question</label>
+          <textarea id="questionInput" rows="1" placeholder="Ask a question about your documents..."></textarea>
+          <button class="send-btn" id="sendBtn" type="submit" aria-label="Send question">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+          </button>
+        </form>
+        <div class="hint">Answers are grounded in your indexed documents · Enter to send · Shift + Enter for a new line</div>
+      </div>
+    </section>
+
+    <section class="view" id="view-documents" hidden>
+      <div class="docs-scroll">
+        <div class="docs-head">
+          <div><h2>Documents</h2><p id="docCount">Loading…</p></div>
+          <div class="actions">
+            <button class="btn" id="refreshBtn" type="button">Refresh</button>
+            <button class="btn primary" id="uploadBtn" type="button">Upload</button>
+          </div>
+        </div>
+        <div class="stats">
+          <div class="stat"><div class="stat-num" id="statDocs">–</div><div class="stat-label">Total documents</div></div>
+          <div class="stat"><div class="stat-num" id="statChunks">–</div><div class="stat-label">Indexed chunks</div></div>
+          <div class="stat"><div class="stat-num" id="statTypes">–</div><div class="stat-label">File types</div></div>
+        </div>
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload documents">
+          <div class="drop-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M7 9l5-5 5 5M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+          </div>
+          <div class="drop-title" id="dropTitle">Drop documents here</div>
+          <div class="drop-sub">or browse from your computer</div>
+          <div class="drop-formats">PDF · DOCX · TXT · MD · CSV · XLSX · PPTX · HTML · scanned PDFs (OCR)</div>
+          <div class="up-status" id="upStatus" data-state="uploading" hidden>
+            <div class="up-row"><span class="up-label" id="upLabel">Uploading document...</span><span class="up-pct" id="upPct"></span></div>
+            <div class="up-name" id="upName"></div>
+            <div class="progress" id="progress"><div class="progress-bar" id="progressBar"></div></div>
+          </div>
+          <input type="file" id="fileInput" hidden multiple accept=".pdf,.docx,.txt,.md,.markdown,.csv,.xlsx,.xls,.pptx,.html,.htm">
+        </div>
+        <ul class="doc-list" id="docList"></ul>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+
+# =========================
+# Virtual environment
+# =========================
+.venv/
+venv/
+env/
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE / editors
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Python tools
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================
+# RAG / local generated data
+# =========================
+backend/data/chroma/
+backend/data/chroma_*/
+backend/data/uploads/
+backend/app/ingestion/data/uploads/
+chroma_db/
+
+# =========================
+# Local test documents
+# =========================
+backend/test_rag.txt
+
+# =========================
+# Model / cache files
+# =========================
+.cache/
+*.bin
+*.safetensors
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Temporary files
+# =========================
+*.tmp
+*.temp
+
+# =========================
+# Microsoft Office temporary files
+# =========================
+~$*

@@ -1,0 +1,158 @@
+[
+  {
+    "id": "qa_001",
+    "question": "What is Artificial Intelligence?",
+    "expected_answer": "Artificial Intelligence is a field of computer science.",
+    "expected_sources": [
+      "sample.docx"
+    ]
+  },
+  {
+    "id": "qa_002",
+    "question": "What does Machine Learning allow computers to do?",
+    "expected_answer": "Machine Learning allows computers to learn patterns from data and make predictions.",
+    "expected_sources": [
+      "sample.docx",
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_003",
+    "question": "What does Deep Learning use to learn complex patterns?",
+    "expected_answer": "Deep Learning uses neural networks to learn complex patterns.",
+    "expected_sources": [
+      "sample.docx",
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_004",
+    "question": "What does Natural Language Processing help computers do?",
+    "expected_answer": "Natural Language Processing helps computers understand and process human language.",
+    "expected_sources": [
+      "sample.docx",
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_005",
+    "question": "What is Deep Learning?",
+    "expected_answer": "Deep Learning is a type of Machine Learning that uses neural networks with multiple layers.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_006",
+    "question": "Who invented Artificial Intelligence?",
+    "expected_answer": "I don't have enough information in the provided documents to answer that.",
+    "expected_sources": []
+  },
+  {
+    "id": "qa_007",
+    "question": "What field of computer science is Artificial Intelligence?",
+    "expected_answer": "Artificial Intelligence is a field of computer science.",
+    "expected_sources": [
+      "sample.docx"
+    ]
+  },
+  {
+    "id": "qa_008",
+    "question": "How does Machine Learning use data?",
+    "expected_answer": "Machine Learning allows computers to learn patterns from data and make predictions.",
+    "expected_sources": [
+      "sample.docx",
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_009",
+    "question": "What type of Machine Learning is Deep Learning?",
+    "expected_answer": "Deep Learning is a type of Machine Learning that uses neural networks with multiple layers.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_010",
+    "question": "Can these documents tell me the founder of Google?",
+    "expected_answer": "I don't have enough information in the provided documents to answer that.",
+    "expected_sources": []
+  },
+  {
+    "id": "qa_011",
+    "question": "What does Artificial Intelligence focus on?",
+    "expected_answer": "Artificial Intelligence focuses on creating systems capable of performing tasks that normally require human intelligence.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_012",
+    "question": "Is Machine Learning a subset of Artificial Intelligence?",
+    "expected_answer": "Yes, Machine Learning is a subset of Artificial Intelligence.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_013",
+    "question": "What can computers learn through Machine Learning?",
+    "expected_answer": "Computers can learn patterns from data and make predictions through Machine Learning.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_014",
+    "question": "What kind of neural networks does Deep Learning use?",
+    "expected_answer": "Deep Learning uses neural networks with multiple layers.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_015",
+    "question": "What does NLP allow computers to understand?",
+    "expected_answer": "Natural Language Processing allows computers to understand and process human language.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_016",
+    "question": "How is Deep Learning related to Machine Learning?",
+    "expected_answer": "Deep Learning is a type of Machine Learning.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_017",
+    "question": "What is the relationship between Machine Learning and Artificial Intelligence?",
+    "expected_answer": "Machine Learning is a subset of Artificial Intelligence.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_018",
+    "question": "What tasks can Artificial Intelligence systems perform?",
+    "expected_answer": "Artificial Intelligence systems can perform tasks that normally require human intelligence.",
+    "expected_sources": [
+      "sample data.pdf"
+    ]
+  },
+  {
+    "id": "qa_019",
+    "question": "Does the provided documentation explain whether Machine Learning is supervised or unsupervised?",
+    "expected_answer": "I don't have enough information in the provided documents to answer that.",
+    "expected_sources": []
+  },
+  {
+    "id": "qa_020",
+    "question": "Do the provided documents identify a specific Machine Learning algorithm?",
+    "expected_answer": "I don't have enough information in the provided documents to answer that.",
+    "expected_sources": []
+  }
+]
