@@ -8,6 +8,12 @@ The goal is to provide answers grounded in the user's uploaded documents rather 
 
 ---
 
+## 🚀 Demo
+
+![Ask My Docs Demo](docs/ask-my-docs-demo.png)
+
+---
+
 ## ✨ Features
 
 - Multi-format document ingestion
@@ -37,7 +43,7 @@ The goal is to provide answers grounded in the user's uploaded documents rather 
 
 ---
 
-## 🧠 How It Works
+# 🧠 How It Works
 
 Ask My Docs follows a multi-stage RAG pipeline.
 
